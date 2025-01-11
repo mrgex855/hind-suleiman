@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+</head>
+<body>
+    <h1>Welcome to the Payment Page</h1>
+    <p>Processing your ticket for: <span id="event-name"></span></p>
+
+    <script>
+        // استخراج اسم الحدث من الرابط
+        const params = new URLSearchParams(window.location.search);
+        const eventName = params.get("event");
+        document.getElementById("event-name").textContent = eventName;
+    </script>
+</body>
+</html>
